@@ -1,0 +1,74 @@
+/* container flex main flex-row
+left flex flex-col
+top-left-js top flex flex-col
+bottom bottom-left-js flex
+right flex flex-col
+top-right-js top flex flex-col
+bottom bottom-right-js flex */
+.main {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.top {
+  height: 50vh;
+  width: 100vw;
+  border: 3px solid red;
+}
+
+.bottom {
+  height: 50vh;
+  width: 100vw;
+  border: 2px solid blue;
+}
+
+.left {
+  width: 50vw;
+  height: 40vw;
+  border: 1px solid black;
+}
+
+.right {
+  width: 50vw;
+  height: 40vw;
+  border: 1px solid red;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    /* background-color: lightblue; */
+  }
+}
+
+@media screen and (min-width: 401px) {
+  * {
+    /* background-color: lightpink; */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    /* background-color: lightgreen; */
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  * {
+    /* background-color: lightyellow; */
+  }
+}
