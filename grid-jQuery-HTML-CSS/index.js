@@ -12,9 +12,25 @@ const copyrightListner = function() {
   });
 };
 
+var kittyClick = function() {
+  $("div").click(function(e) {
+    var cl = $(this).attr("class");
+
+    var htm = $(e.target).html();
+    if (htm.indexOf("img") === -1) {
+      $(e.target).html("");
+    }
+
+    $(`.${cl}`).append(
+      `<img class="kittykat" src="https://media0.giphy.com/media/cXaeWuJ1oKO4g/giphy.gif"/>`
+    );
+  });
+};
+
 const autoRunner = function() {
   logger(autoRunner);
   copyrightListner();
+  kittyClick();
 };
 
 autoRunner();

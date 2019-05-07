@@ -5,9 +5,56 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.title {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.output-right {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.output-left {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer {
+  /*  */
+}
+
 .grid {
   height: 100vh;
   display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". title title title title title title title ."
+    ". title title title title title title title ."
+    ". title title title title title title title ."
+    ".  output-left output-left output-left output-right  output-right output-right output-right ."
+    ".  output-left output-left output-left output-right  output-right output-right output-right ."
+    ".  output-left output-left output-left output-right  output-right output-right output-right ."
+    ".  output-left output-left output-left output-right  output-right output-right output-right ."
+    ".  output-left output-left output-left output-right  output-right output-right output-right ."
+    " . footer footer footer footer footer footer footer .";
+}
+
+.kittykat {
+  border-radius: 100%;
+  border: 2px pink solid;
+  height: 14vw;
+  width: 14vw;
 }
 
 .grid div {
@@ -45,184 +92,4 @@
 
 .github-button {
   margin-left: .5vw;
-}
-
-@media screen and (max-width: 480px) {
-  .grid {
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-areas:
-      " title title title title title title title title title "
-      "input input input input input input input input input "
-      "  input input input input input input input input input "
-      " output-left output-left output-left output-left output-left output-left   output-left  output-left  output-left "
-      "  output-left output-left output-left output-left output-left output-left   output-left  output-left  output-left "
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "  footer footer footer footer footer footer footer footer footer";
-  }
-
-  .title {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .input {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-right {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-left {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer {
-    /*  */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .grid {
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      " title title title title title title title title title "
-      "input input input input input input input input input "
-      "  input input input input input input input input input "
-      " output-left output-left output-left output-left output-left output-left   output-left  output-left  output-left "
-      "  output-left output-left output-left output-left output-left output-left   output-left  output-left  output-left "
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "output-right  output-right output-right output-right output-right  output-right output-right output-right output-right"
-      "  footer footer footer footer footer footer footer footer footer";
-  }
-
-  .title {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .input {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-right {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-left {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer {
-    /*  */
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 979px) {
-  .grid {
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      ". title title title title title title title ."
-      ". input input input input input input input ."
-      ".  input input input input input input input ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      " . footer footer footer footer footer footer footer .";
-  }
-
-  .title {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .input {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-right {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-left {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer {
-    /*  */
-  }
-}
-
-@media screen and (min-width: 979px) {
-  .grid {
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      ". title title title title title title title ."
-      ". input input input input input input input ."
-      ".  input input input input input input input ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      ".  output-left output-left output-left output-right  output-right output-right output-right ."
-      " . footer footer footer footer footer footer footer .";
-  }
-
-  .title {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .input {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-right {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .output-left {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer {
-    /*  */
-  }
 }
